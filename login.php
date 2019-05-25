@@ -11,13 +11,13 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 	<body>
         <div id="center">
 	    	<form action="login.php" method="POST">
             <div id="login">
-                <h1>Sign in to continue</h1>
+                <h1>SIGN IN</h1>
                 <p>Username</p>
                 <input type="text" placeholder="Enter Username" name="login">
                 <p>Password</p>
