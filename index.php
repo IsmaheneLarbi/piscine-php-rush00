@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>WEBSITE</title>
-		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body >
 		<div id="menu">
@@ -57,31 +57,31 @@
 		<div id="center">
 			<div class="row">
 				<div class="column">
-					<p><a href="#"><img src="img/white_shoe_w.jpg"></a></p>
+					<p><a href="#"><img class="pic" src="img/white_shoe_w.jpg"></a></p>
 					<p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img src="img/black_shoe_m.jpeg"></a></p>
+					  <p><a href="#"><img class="pic" src="img/black_shoe_m.jpeg"></a></p>
 					  <p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img src="picture"></a></p>
+					  <p><a href="#"><img class="pic" src="img/t_shirt_black_m.jpg"></a></p>
 					  <p>description</p>
   				</div>
 			</div>
 			<div class="row">
-				<div class="column">
-					<p><a href="#"><img src="picture"></a></p>
+				<div class="column center">
+					<p><a href="#"><img class="pic" src="img/t_shirt_red_m.jpg"></a></p>
 					<p>description</p>
   				</div>
-  				<div class="column">
+  				<!--<div class="column">
 					  <p><a href="#"><img src="picture"></a></p>
 					  <p>description</p>
   				</div>
   				<div class="column">
 					  <p><a href="#"><img src="picture"></a></p>
 					  <p>description</p>
-  				</div>
+  				</div>-->
 			</div>
 		</div>
 	</body>

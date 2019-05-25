@@ -6,7 +6,7 @@
 #login {
     text-align: center;
     border:1px;
-    background-color:grey;
+    background-color:rgb(192, 177, 177);
     box-shadow: 4px 4px 2px 1px rgba(75, 75, 85, 0.671);
     border-radius: 10%;
     height: 50%;
@@ -34,7 +34,9 @@ input[type=text], input[type=password] {
   }
   h1 {
     padding-top: 5%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 p {
     margin: 1%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
