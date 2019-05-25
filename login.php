@@ -4,21 +4,22 @@
     {
         if (!empty($_POST['login']) && !empty($_POST['passwd']))
         {
+            //just to test this file
             $con = mysqli_connect("127.0.0.1", "root", "myadmin", "Inventory");
             $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
             $_SESSION['passwd'] = mysqli_real_escape_string($con, $_POST['passwd']);
             //check if user exists in users
-            //just to test this file
             $query = "SELECT * FROM Users";
             $result = mysqli_query($con, $query);
             if (!empty($result))
             {
-                $rows = mysqli_fetch_array($result);
+                $rows = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 foreach ($rows as $key=>$value)
                 {
-                    if ($row['username'] === $_SESSION['login'] && $row['pwd'] === $_SESSION['passwd'])
+                    
+                    if ($rows['username'] === $_SESSION['login'] && $rows['pwd'] === $_SESSION['passwd'])
                     {
-                        // header("Location: index.php");
+                        header("Location: index.php");
                         echo "user authenticated\n";
                         exit();
                     }
