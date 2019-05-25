@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_SERVER['not']))
+    {
+        echo "OK\n";
+    }
+    else echo "KO\n";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +15,7 @@
 </head>
 	<body>
         <div id="center">
-	    	<form action="create.php" method="POST">
+	    	<form action="login.php" method="POST">
             <div id="login">
                 <h1>Sign in to continue</h1>
                 <p>Username</p>
