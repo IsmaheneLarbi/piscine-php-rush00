@@ -2,29 +2,32 @@
     session_start();
     if ($_SERVER['REQUEST_METHOD'] == "POST") 
     {
-        if (isset($_POST['login']) && isset($_POST['passwd']))
+        if (!empty($_POST['login']) && !empty($_POST['passwd']))
         {
+            $con = mysqli_connect("127.0.0.1", "root", "myadmin", "Inventory");
+            $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
+            $_SESSION['passwd'] = mysqli_real_escape_string($con, $_POST['passwd']);
             //check if user exists in users
             //just to test this file
-            $con = mysqli_connect("127.0.0.1", "root", "myadmin", "Inventory");
             $query = "SELECT * FROM Users";
             $result = mysqli_query($con, $query);
             if (!empty($result))
             {
-                $row = mysqli_fetch_array($result);
-                foreach ($row as $key=>$value)
+                $rows = mysqli_fetch_array($result);
+                foreach ($rows as $key=>$value)
                 {
                     if ($row['username'] === $_SESSION['login'] && $row['pwd'] === $_SESSION['passwd'])
                     {
-                        header("Location: login.php");
+                        // header("Location: index.php");
+                        echo "user authenticated\n";
                         exit();
                     }
                 }
             }
-            echo "Login failed. Username or/and password invalid\n";
+            echo "Login failed. Username or/and password invalid 1\n";
         }
         else
-            echo "Login failed. Username or/and password invalid\n";
+            echo "Login failed. Username or/and password invalid 2\n";
     }
 ?>
 <html>

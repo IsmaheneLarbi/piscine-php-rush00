@@ -25,13 +25,11 @@
         {
             die("Failed to create the root user \n".mysqli_error());
         }
-        // $men = "CREATE TABLE Men(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, category_id  INT FOREIGN KEY REFERENCES Category(id), description  VARCHAR(30) NOT NULL, size INT)";
-        // $women = "CREATE TABLE Women(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, category_id  INT FOREIGN KEY REFERENCES Category(id), description  VARCHAR(30) NOT NULL, size INT)";
-        // $children = "CREATE TABLE Children(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, category_id  INT FOREIGN KEY REFERENCES Category(id), description  VARCHAR(30) NOT NULL, size INT)";
-        // $categories = "CREATE TABLE Categories(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, label VARCHAR(30) NOT NULL)";
-        // create_tbl($con, $men);
-        // create_tbl($con, $women);
-        // create_tbl($con, $children);
-        // create_tbl($con, $categories);
+        $men = "CREATE TABLE Men(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, description  VARCHAR(30) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
+        $women = "CREATE TABLE Women(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, description  VARCHAR(30) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
+        $children = "CREATE TABLE Children(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, description  VARCHAR(30) NOT NULL, price INT NOT NULL, size INT  NOT NULL)";
+        create_tbl($con, "Men", $men);
+        create_tbl($con, "Women", $women);
+        create_tbl($con, "Children", $children);
     }
 ?>

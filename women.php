@@ -10,10 +10,10 @@
 			    <div class="dropdown">
 				<button class="button darkblue">WOMEN</button>
 				<div class="dropdown-content darkblue">
-					<a href="women.php"></a>
-					<a href="women.php">Clothes</a>
-					<a href="women.php">Shoes</a>
-					<a href="women.php">Accessoires</a>
+					<a href="#"></a>
+					<a href="#">Clothes</a>
+					<a href="#">Shoes</a>
+					<a href="#">Accessoires</a>
 				</div>
 			    </div>
 			    <div class="dropdown">
@@ -41,7 +41,7 @@
 			    <div class="dropdown">
 				<button class="button lightblue">BASKET</button>
 				<div class="dropdown-content lightblue">
-					<a href="basket.php">See your basket</a>
+					<a href="#">See your basket</a>
 					<a href="#">Empty basket</a>
 					<a href="#">Checkout</a>
 				</div>
@@ -49,9 +49,6 @@
 			    <div class="dropdown">
 				<button class="button verylightblue">USERPAGE</button>
 				<div class="dropdown-content verylightblue">
-					<a href="login.php">Login</a>
-					<a href="modif.php">Change your password</a>
-					<a href="create.php">Create a user</a>
 				</div>
                 </div>
             </div>
@@ -64,27 +61,41 @@
 					<p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img class="pic" src="img/men/black_shoe_m.jpeg"></a></p>
+					  <p><a href="#"><img class="pic" src="img/women/black_shoe_w.jpeg"></a></p>
 					  <p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img class="pic" src="img/men/t_shirt_black_m.jpg"></a></p>
+					  <p><a href="#"><img class="pic" src="img/women/pink_shoe_w.jpeg"></a></p>
 					  <p>description</p>
   				</div>
 			</div>
 			<div class="row">
 				<div class="column center">
-					<p><a href="#"><img class="pic" src="img/men/t_shirt_red_m.jpg"></a></p>
+					<p><a href="#"><img class="pic" src="picture"></a></p>
 					<p>description</p>
   				</div>
-  				<!--<div class="column">
+  			    <div class="column">
 					  <p><a href="#"><img src="picture"></a></p>
 					  <p>description</p>
   				</div>
   				<div class="column">
 					  <p><a href="#"><img src="picture"></a></p>
 					  <p>description</p>
-  				</div>-->
+  				</div>
+            </div>
+            <div class="row">
+				<div class="column center">
+					<p><a href="#"><img class="pic" src="picture"></a></p>
+					<p>description</p>
+  				</div>
+  			    <div class="column">
+					  <p><a href="#"><img src="picture"></a></p>
+					  <p>description</p>
+  				</div>
+  				<div class="column">
+					  <p><a href="#"><img src="picture"></a></p>
+					  <p>description</p>
+  				</div>
 			</div>
 		</div>
 	</body>
