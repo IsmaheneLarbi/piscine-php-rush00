@@ -15,7 +15,7 @@
 </head>
 	<body>
         <div id="center">
-	    	<form action="login.php" method="POST">
+	    	<form action="./login.php" method="POST">
             <div id="login">
                 <h1>Sign in to continue</h1>
                 <p>Username</p>
@@ -24,9 +24,9 @@
                 <p><input type="password" placeholder="Enter Password" name="passwd"></p>
                 <input type="submit" name="submit" value="Sign in">
                 <div class="text-foot">
-                    <p>Don't have an account yet? <a href="create.php" class="btn">Register</a></p>
-                    <p>Want to change your password? <a href="modif.php" class="btn">Modify Password</a></p>
-                    <p>Go back to <a href="index.php" class="btn">Mainpage</a></p>
+                    <!-- <p>Don't have an account yet? <a href="create.php" class="btn">Register</a></p> -->
+                    <!-- <p>Want to change your password? <a href="modif.php" class="btn">Modify Password</a></p> -->
+                    <!-- <p>Go back to <a href="index.php" class="btn">Mainpage</a></p> -->
                 </div>
             </div>
             </form>
