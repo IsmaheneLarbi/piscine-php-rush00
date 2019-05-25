@@ -18,6 +18,12 @@ a:hover {
 	color: white;
 }
 
+.homepage:hover {
+	color:grey;
+}
+h1 {
+	font-family: 'Courier New', Courier, monospace;
+}
 .darkblue {background-color: rgb(20, 132, 211);}
 .seablue {background-color: rgb(23, 146, 232);}
 .skyblue {background-color: rgb(25, 156, 231);}
