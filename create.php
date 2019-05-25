@@ -1,15 +1,4 @@
 <?php
 
-    function create($username, $pwd)
-    {
-        if (!empty($username) && !empty($pwd))
-        {
-           
-            
-        }
-        else
-        {
-            echo "Error: failed to create new user: username or password invalid \n";
-        }
-    }
+echo "YAAAAS /Users/ilarbi/http/MyWebSite/piscine/piscine-php-rush00/login.php\n";
 ?>
