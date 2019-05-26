@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div id="middle">
-                <h1><a class="homepage" href="index.php">NAME OF WEBSITE</a></h1>
+                <h1><a class="homepage" href="index.php">ONLINE-SHOP</a></h1>
             </div>
             <div id="push">
 			    <div class="dropdown">

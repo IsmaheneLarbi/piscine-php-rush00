@@ -9,7 +9,7 @@
 		<br>
 		<div id="center">
 		<div class="shirts" id="shirts">
-			<h1>SHIRTS</h1>
+			<h1 class="white">SHIRTS</h1>
 			<div class="separate">
 			</div>
 			<div class="row">
@@ -29,7 +29,7 @@
 		</div>
 		<hr>
 		<div class="bottoms" id="bottoms">
-			<h1>BOTTOMS</h1>
+			<h1 class="white">BOTTOMS</h1>
 			<div class="row">
 				<div class="column center">
 					<p><a href="#"><img class="pic" src="picture"></a></p>
@@ -47,7 +47,7 @@
 		</div>
 		<hr>
 		<div class="shoes" id="shoes">
-			<h1>SHOES</h1>
+			<h1 class="white">SHOES</h1>
 			<div class="row">
 				<div class="column">
 					<p><a href="#"><img class="pic" src="picture"></a></p>
