@@ -1,7 +1,5 @@
 <?php
 
-    echo "In connect\n";
-
     function connect($host, $user, $passwd)
     {
         $con = mysqli_connect($host, $user, $passwd);

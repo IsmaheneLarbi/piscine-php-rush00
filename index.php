@@ -3,7 +3,6 @@
 	include_once "./install.php";
 	include_once "./lib/tbl_get_rows.php";
 	$men = tbl_get_rows($con, "Men");
-	echo $men[0]['description'];
 	$women = tbl_get_rows($con, "Women");
 	$children = tbl_get_rows($con, "Children");
 ?>
