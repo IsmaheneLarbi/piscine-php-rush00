@@ -4,10 +4,7 @@
     {
         $db_create = "CREATE DATABASE IF NOT EXISTS ".$db;
         if (mysqli_query($con, $db_create))
-        {
-            echo "Database created\n";
             return TRUE;
-        }
         else
         {
             echo "Could not create database".mysqli_error($con);
