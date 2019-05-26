@@ -1,5 +1,9 @@
-
-<!DOCTYPE html>
+<?php
+    session_start();
+    // var_dump($_SESSION);
+    if (!empty($_POST['submit']) && $_POST['submit'] === "OK"
+    && !empty($_POST['login']) && !empty($_POST['passwd']))
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +12,7 @@
 </head>
 	<body>
         <div id="center">
-	    	<form action="login.php" method="POST">
+	    	<form action="create.php" method="POST">
             <div id="login">
                 <h1>Create a new user</h1>
                 <p>Username</p>
