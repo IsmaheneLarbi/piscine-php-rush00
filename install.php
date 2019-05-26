@@ -3,8 +3,8 @@
 include_once "./lib/create_db.php";
 include_once "./lib/create_tbl.php";
 include_once "./lib/insert_into_table.php";
-// 1* load resources: images
-// 2* connect to db
+
+
 $host = "127.0.0.1";
 $user = "root";
 $passwd = "myadmin";
@@ -25,8 +25,11 @@ $db = "Inventory";
             die("Failed to create the root user \n".mysqli_error($con));
         }
         $passwd = hash('whirlpool', 'user');
-        insert_into_table($con, "Users", "INSERT INTO Users(username, passwd, privilege) VALUES ('ismahene', '".$passwd."', 0)");
-        insert_into_table($con, "Users", "INSERT INTO Users(username, passwd, privilege) VALUES ('stina', '".$passwd."', 0)");
+        $privilege = 0;
+        // insert_into_table($con, "Users", "INSER?Us?ass?d, privilege) VALUES ('stina', '".$passwd."', 0)");
+        insert_into_table($con, "Users", "INSERT INTO Users(username, passwd, privilege) VALUES (?, ?, ?)", array('username'=>'ismahene', 'passwd'=>$passwd, 'privilege'=>$privilege));
+        // insert_into_table($con, "Users", "INSERT INTO Users(username, passwd, privilege) VALUES ('stina', '".$passwd."', 0)");
+        insert_into_table($con, "Users", "INSERT INTO Users(username, passwd, privilege) VALUES (?, ?, ?)", array('username'=>'stina', 'passwd'=>$passwd, 'privilege'=>$privilege));
         $men = "CREATE TABLE Men(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
         $women = "CREATE TABLE Women(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
         $children = "CREATE TABLE Children(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT  NOT NULL)";
@@ -35,38 +38,37 @@ $db = "Inventory";
         create_tbl($con, "Children", $children);
 
         //3*filling
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/bottoms/shorts_izod_blue.jpg', 'Shorts IZOD Menwear', 60, 40)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/bottoms/trouser_pullandbear_blue.jpg', 'Trousers  PULL&BEAR Menwear', 80, 38)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/bottoms/trouser_yourturn_grey.jpg', 'Trousers YOUR TURN Menwear', 100, 36)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shirts/polo_ralphlauren_black.jpg', 'Polo RALPH LAUREN Menwear', 140, 38)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shirts/shirt_tomtailor_blue.jpg', 'Shirt TOM TAILOR Menwear', 190, 40)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shirts/tshirt_ralphlauren_white.jpg', 'T-shirt RALPH LAUREN Menwear', 150, 38)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shoes/converse_blue.jpg', 'CONVERSE model 45', 90, 40)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shoes/newbalance_white.jpg', 'NEW BALANCE model 360', 85, 38)");
-        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES('./img/men/shoes/nike_white.jpg', 'NIKE AIR', 160, 42)");
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/bottoms/shorts_izod_blue.jpg', 'description'=>'Shorts IZOD Menwear', 'price'=>60, 'size'=>40));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/bottoms/trouser_pullandbear_blue.jpg', 'description'=>'Trousers  PULL&BEAR Menwear', 'price'=>80, 'size'=>38));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/bottoms/trouser_yourturn_grey.jpg', 'description'=>'Trousers YOUR TURN Menwear', 'price'=>100, 'size'=>36));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shirts/polo_ralphlauren_black.jpg', 'description'=>'Polo RALPH LAUREN Menwear', 'price'=>140, 'size'=>38));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shirts/shirt_tomtailor_blue.jpg', 'description'=>'Shirt TOM TAILOR Menwear', 'price'=>190, 'size'=>40));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shirts/tshirt_ralphlauren_white.jpg', 'description'=>'T-shirt RALPH LAUREN Menwear', 'price'=>150, 'size'=>38));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/converse_blue.jpg', 'description'=>'CONVERSE model 45', 'price'=>90, 'size'=>40));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/newbalance_white.jpg', 'description'=>'NEW BALANCE model 360', 'price'=>85, 'size'=>38));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/nike_white.jpg', 'description'=>'NIKE AIR', 'price'=>160, 'size'=>42));
         
         
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/bottoms/trouser_leivs_black.jpg', 'Trousers LEVI\'S', 140, 38)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/bottoms/short_levis_blue.jpg', 'Shorts LEVI\'S', 120, 36)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/bottoms/skirt_only_blue.png', 'Skirt ONLY BLUE', 90, 34)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shirts/pullover_nike_grey.jpg', 'Pullover NIKE ', 65, 36)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shirts/blouse_sanna_blue.jpg', 'Shirt SANNA ', 40, 36)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shirts/dress_vila_black.jpg', 'Dress VILLA', 200, 36)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shoes/reebok_white.jpg', 'REEBOK', 100, 38)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shoes/vans_black.jpg', 'VANS', 125, 36)");
-        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES('./img/women/shoes/vans_red.jpg', 'VANS', 135, 39)");
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/bottoms/trouser_leivs_black.jpg', 'description'=>'Trousers LEVI\'S', 'price'=>140, 'size'=>38));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/bottoms/short_levis_blue.jpg', 'description'=>'Shorts LEVI\'S', 'price'=>120, 'size'=>36));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/bottoms/skirt_only_blue.png', 'description'=>'Skirt ONLY BLUE', 'price'=>90, 'size'=>34));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shirts/pullover_nike_grey.jpg', 'description'=>'Pullover NIKE ','price'=> 65, 'size'=>36));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shirts/blouse_sanna_blue.jpg', 'description'=>'Shirt SANNA ', 'price'=>40, 'size'=>36));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shirts/dress_vila_black.jpg', 'description'=>'Dress VILLA', 'price'=>200, 'size'=>36));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shoes/reebok_white.jpg', 'description'=>'REEBOK','price'=> 100, 'size'=>38));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shoes/vans_black.jpg', 'description'=>'VANS', 'price'=>125, 'size'=>36));
+        insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/shoes/vans_red.jpg', 'description'=>'VANS', 'price'=>135, 'size'=>39));
 
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/bottoms/shorts_3_pack_fribo.jpg', 'Shorts FRIBO Children colllection', 100, 34)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/bottoms/trouser_hilfiger_blue.jpg', 'Trousers TOMMY HILFIGER Children colllection', 200, 32)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/bottoms/trouser_j_crew_grey.jpg', 'Trousers JCREW', 100, 30)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shirts/t_shirt_lacoste_white.jpg', 'T-shirt LACOSTE Children colllection', 80, 32)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shirts/t_shirt_benetton_grey.jpg', 'T-shirt BENETTON Children colllection', 140, 30)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shirts/tshirt_levis_blue.jpg', 'T-shirt LEVI\S Children colllection', 90, 28)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shoes/vans_pink.jpg', 'VANS Children collection', 110, 28)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shoes/babies_sandals.jpg', 'Babies Sandals  FRIBO Children collection', 120, 28)");
-        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/men/shoes/nike_white.jpg', 'NIKE Children collection', 90, 26)");
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/bottoms/shorts_3_pack_fribo.jpg', 'description'=>'Shorts FRIBO Children colllection', 'price'=>100, 'size'=>34));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/bottoms/trouser_hilfiger_blue.jpg', 'description'=>'Trousers TOMMY HILFIGER Children colllection','price'=> 200, 'size'=>32));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/bottoms/trouser_j_crew_grey.jpg', 'description'=>'Trousers JCREW', 'price'=>100, 'size'=>30));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/shirts/t_shirt_lacoste_white.jpg', 'description'=>'T-shirt LACOSTE Children colllection', 'price'=>80, 'size'=>32));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/shirts/t_shirt_benetton_grey.jpg', 'description'=>'T-shirt BENETTON Children colllection','price'=> 140,'size'=> 30));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/shirts/tshirt_levis_blue.jpg', 'description'=>'T-shirt LEVI\S Children colllection','price'=> 90, 'size'=>28));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/shoes/vans_pink.jpg', 'description'=>'VANS Children collection', 'price'=>110, 'size'=>28));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/CHILDREN/shoes/babies_sandals.jpg', 'description'=>'Babies Sandals  FRIBO Children collection', 'price'=>120, 'size'=>28));
+        insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/nike_white.jpg', 'description'=>'NIKE Children collection','price'=> 90, 'size'=>26));
 
-        echo "done with install\n";
         //load mainpage
         // header("Location : index.php");
     }

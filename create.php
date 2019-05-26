@@ -3,10 +3,11 @@
     
 	include_once "./install.php";
     
-    echo "OK sis3!\n";
     include_once "./lib/tbl_get_rows.php";
     include_once "./lib/insert_into_table.php";
-	$users = tbl_get_rows($con, "Users");
+
+    $users = tbl_get_rows($con, "Users");
+    $privilege = 0;
     if (isset($_POST['submit']))
     {
         if (!empty($_POST['submit']) && $_POST['submit'] === "Submit"
@@ -24,7 +25,7 @@
             }
             
             $query = "INSERT INTO Users(username, passwd, privilege) VALUES(?, ?, ?)";
-            insert_into_table($con, "Users", $query);
+            insert_into_users($con, "Users", $privilege);
             
         }
         else
