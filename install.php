@@ -20,13 +20,15 @@
         mysqli_select_db($con, $db);
         $users = "CREATE TABLE  Users(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(30) NOT NULL, pwd VARCHAR(12) NOT NULL, privilege INT DEFAULT 0 , reg_date TIMESTAMP)";
         create_tbl($con, "Users", $users);
-        $add_root = "INSERT INTO Users(username, pwd, privilege) VALUES ('root', 'myadmin', 1)"; 
+        $pwd = hash('whirlpool', 'myadmin');
+        $add_root = "INSERT INTO Users(username, pwd, privilege) VALUES ('root', '".$pwd."', 1)"; 
         if (!mysqli_query($con, $add_root))
         {
-            die("Failed to create the root user \n".mysqli_error());
+            die("Failed to create the root user \n".mysqli_error($con));
         }
-        insert_into_table($con, "Users", "INSERT INTO Users(username, pwd, privilege) VALUES ('ismahene', 'user', 0)");
-        insert_into_table($con, "Users", "INSERT INTO Users(username, pwd, privilege) VALUES ('stina', 'user', 0)");
+        $pwd = hash('whirlpool', 'user');
+        insert_into_table($con, "Users", "INSERT INTO Users(username, pwd, privilege) VALUES ('ismahene', '".$pwd."', 0)");
+        insert_into_table($con, "Users", "INSERT INTO Users(username, pwd, privilege) VALUES ('stina', '".$pwd."', 0)");
         $men = "CREATE TABLE Men(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
         $women = "CREATE TABLE Women(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT NOT NULL)";
         $children = "CREATE TABLE Children(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, img VARCHAR(128) NOT NULL, `description`  VARCHAR(128) NOT NULL, price INT NOT NULL, size INT  NOT NULL)";
