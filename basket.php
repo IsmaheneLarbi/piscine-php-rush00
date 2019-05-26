@@ -9,6 +9,7 @@
 <body>
 	<?php require_once 'header.php';  ?>
 	<br>
+	<h2>BASKET</h2>
 	<div id="centerbasket">
 		<div class="basket">
 			<div class="rowbasket">
@@ -17,41 +18,110 @@
 					<div class="description">
 						<p id="test">description</p>
 						<p>Price: </p>
-						<form>
-							<select id="size" name="size">
-								<option value="38">38</option>
-								<option value="39">39</option>
-								<option value="40">40</option>
-							</select>
-						</form>
+						<br>
+						<div class="change">
+							<p>Size</p>
+							<form action="changesize" method="post">
+								<select id="size" name="size">
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="change">
+							<p>Amount</p>
+							<form action="changeamount" method="post">
+								<!--<label for="action">Options:</label>-->
+								<select name="action" id="size">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="delete">
+						<p>Delete this item from your basket</p>
+						<a href="delete"><img class="deletepic" src="./img/delete.png" /></a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="rowbasket">
 				<div class="columnbasket">
-					<a href="#"><img class="pic" src="img/MEN/bottoms/trouser_yourturn_grey.jpg"></a>
-					<p>description</p>
+					<a href="#"><img class="pic" src="img/WOMEN/shirts/blouse_sanna_blue.jpg"></a>
+					<div class="description">
+						<p id="test">description</p>
+						<p>Price: </p>
+						<br>
+						<div class="change">
+							<p>Size</p>
+							<form action="changesize" method="post">
+								<select id="size" name="size">
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="change">
+							<p>Amount</p>
+							<form action="changeamount" method="post">
+								<!--<label for="action">Options:</label>-->
+								<select name="action" id="size">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="delete">
+						<p>Delete this item from your basket</p>
+						<a href="delete"><img class="deletepic" src="./img/delete.png" /></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="rowbasket">
 				<div class="columnbasket">
-					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_lacoste_white.jpg"></a>
-					<p>description</p>
+					<a href="#"><img class="pic" src="img/WOMEN/shirts/blouse_sanna_blue.jpg"></a>
+					<div class="description">
+						<p id="test">description</p>
+						<p>Price: </p>
+						<br>
+						<div class="change">
+							<p>Size</p>
+							<form action="changesize" method="post">
+								<select id="size" name="size">
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="change">
+							<p>Amount</p>
+							<form action="changeamount" method="post">
+								<!--<label for="action">Options:</label>-->
+								<select name="action" id="size">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+								<button type="add" name="submit" value="submit">Submit</button>
+							</form>
+						</div>
+						<div class="delete">
+						<p>Delete this item from your basket</p>
+						<a href="delete"><img class="deletepic" src="./img/delete.png" /></a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="rowbasket">
-				<div class="columnbasket">
-					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_benetton_grey.jpg"></a>
-					<p>description</p>
-				</div>
-				<!--<div class="columnbasket">
-	    				  <p><a href="#"><img src="picture"></a></p>
-		    			  <p>description</p>
-  			    	</div>
-    				<div class="columnbasket">
-	    				  <p><a href="#"><img src="picture"></a></p>
-		    			  <p>description</p>
-  			    	</div>-->
 			</div>
 		</div>
 		<div class="info">

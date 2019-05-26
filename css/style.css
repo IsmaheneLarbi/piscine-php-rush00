@@ -26,7 +26,7 @@ a:hover {
 }
 .homepage {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 20px;
+	font-size: 35px;
 	padding-top: 10%;
 }
 .search {
@@ -56,6 +56,8 @@ input[type=text] {
   }
 h1 {
 	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	color: rgba(136, 133, 133, 0.884);
 }
 
 font {
@@ -299,5 +301,34 @@ input[type=user], input[type=password] {
   }
 
   .color {
-	  background-color: rgb(160, 153, 153);
+	  background-color: rgba(230, 213, 213, 0.623);
+  }
+
+  #shoes{
+
+  }
+
+  #size {
+	  width: 40px;
+	  margin-left: 20px;
+	  margin-top: 16px;
+  }
+  .change {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+  }
+  h2 {
+	  font-family: 'Courier New', Courier, monospace;
+	  text-align: center;
+  }
+
+  .delete {
+	  text-align: center;
+	  width: 50%;
+	  margin-left: 20%;
+  }
+
+  .deletepic {
+	  width: 20%;
   }
