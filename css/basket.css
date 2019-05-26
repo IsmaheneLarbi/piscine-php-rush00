@@ -18,12 +18,15 @@ a:hover {
 	color: white;
 }
 
+.homepage {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	padding-top: 10%;
+}
 .homepage:hover {
 	color:grey;
 }
-h1 {
-	font-family: 'Courier New', Courier, monospace;
-}
+
 .darkblue {background-color: rgb(20, 132, 211);}
 .seablue {background-color: rgb(23, 146, 232);}
 .skyblue {background-color: rgb(25, 156, 231);}
@@ -38,9 +41,10 @@ h1 {
 }*/
 .row {
 	padding-top: 5%;
-	padding-bottom: 5%;
-	display: flex;
-	justify-content: space-evenly;
+    padding-left: 5%;
+	/*display: flex;*/
+	width: 130%;
+	justify-content: left;
 }
 
 .pic {
@@ -55,8 +59,10 @@ h1 {
 	/*height: 200px;
 	width: 200px;*/
 	padding: 5px;
+	width: 60%;
 	border:1px solid black;
 	border-radius: 3%;
+	display: flex;
 }
 .button {
 	color: rgb(51, 51, 51);
@@ -77,6 +83,7 @@ footer {
 	text-align: center;
 	bottom: 0;
 	position: relative;
+	padding-top: 2%;
 	left: 0;
 	width: 100%;
 }
@@ -94,10 +101,10 @@ html {
     flex-direction: row;
 	padding-left: 20%;
 }
-.center {
+#center {
 	display: flex;
-	flex-direction: column;
-	/*align-items: center;*/
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 #left {
@@ -115,4 +122,25 @@ html {
 }
 p {
 	text-align: center;
+}
+
+.info {
+	display: flex;
+	border:1px solid black;
+}
+.basket {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	display: flex;
+	border:1px solid black;
+	padding-bottom: 3%;
+}
+
+.description {
+	font-family: 'Courier New', Courier, monospace;
+}
+#test {
+	font-size: 150%;
+	padding-top: 10%;
 }
