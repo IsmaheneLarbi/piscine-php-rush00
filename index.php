@@ -23,8 +23,9 @@
 						<p>Price: </p>
 						<!--<input class="addtype" type="button" value="Add to basket">-->
 						<form action="addtobasket" method="post">
-  							<!--<label for="action">Options:</label>-->
-  								<select name="action" id="action">
+							  <!--<label for="action">Options:</label>-->
+							  	<p>Size</p>
+  								<select name="action" id="size">
    								<option value="37">37</option>
    								<option value="38">38</option>
   							  	<option value="39">39</option>
