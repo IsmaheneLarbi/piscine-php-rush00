@@ -7,17 +7,21 @@
             //just to test this file
             $con = mysqli_connect("127.0.0.1", "root", "myadmin", "Inventory");
             $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
-            $_SESSION['passwd'] = mysqli_real_escape_string($con, $_POST['passwd']);
+            $_SESSION['passwd'] = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
             //check if user exists in users
             $query = "SELECT * FROM Users";
             $result = mysqli_query($con, $query);
             if (!empty($result))
             {
-                $rows = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                if (!($rows = mysqli_fetch_all($result, MYSQLI_ASSOC)))
+                    echo "Error: Failed to retrieve data from Users ".mysqli_error($con);
+                    // echo $rows[0]['username']."\n";
+                    // echo $_SESSION['login']."\n";
+                    // echo $rows[0]['passwd']."\n";
+                    // echo $_SESSION['passwd']."\n";
                 foreach ($rows as $key=>$value)
                 {
-                    
-                    if ($rows['username'] === $_SESSION['login'] && $rows['pwd'] === $_SESSION['passwd'])
+                    if ($value['username'] === $_SESSION['login'] && $value['passwd'] === $_SESSION['passwd'])
                     {
                         header("Location: index.php");
                         echo "user authenticated\n";
@@ -25,10 +29,10 @@
                     }
                 }
             }
-            echo "Login failed. Username or/and password invalid 1\n";
+            echo "Login failed. Username or/and password invalid\n";
         }
         else
-            echo "Login failed. Username or/and password invalid 2\n";
+            echo "Login failed. Username or/and password invalid\n";
     }
 ?>
 <html>

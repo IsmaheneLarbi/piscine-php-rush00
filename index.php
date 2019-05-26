@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+	include_once "./install.php";
+	include_once "./lib/tbl_get_rows.php";
+	$men = tbl_get_rows($con, "Men");
+	$women = tbl_get_rows($con, "Women");
+	$children = tbl_get_rows($con, "Children");
+?>
 <html>
 	<head>
 		<title>WEBSITE</title>
@@ -10,31 +17,45 @@
 	<div id="center">
 			<div class="row">
 				<div class="column">
-					<a href="#"><img class="pic" src="img/WOMEN/shirts/blouse_sanna_blue.jpg"></a>
-					<p>description</p>
+					<p><? echo $men[0]['description'];?></p>
+					<a href="#"><img class="pic" src=<? echo $men[0]['img'];?>></a>
   				</div>
   				<div class="column">
-					<a href="#"><img class="pic" src="img/MEN/bottoms/trouser_yourturn_grey.jpg"></a>
-					<p>description</p>
+					<p><? echo $women[0]['description']; ?></p>
+					<a href="#"><img class="pic" src=<? echo $women[0]['img']?>></a>
   				</div>
   				<div class="column">
-					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_lacoste_white.jpg"></a>
-					<p>description</p>
+					<p><? echo $children[0]['description'];?></p>
+					<a href="#"><img class="pic" src=<? echo $children[0]['img'];?>></a>
   				</div>
 			</div>
 			<div class="row">
-				<div class="column center">
-					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_benetton_grey.jpg"></a>
-					<p>description</p>
-  				</div>
-  				<!--<div class="column">
-					  <p><a href="#"><img src="picture"></a></p>
-					  <p>description</p>
+				<div class="column">
+					<p><? echo $men[3]['description'];?></p>
+					<a href="#"><img class="pic" src=<? echo $men[3]['img'];?>></a>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img src="picture"></a></p>
-					  <p>description</p>
-  				</div>-->
+					  <p><? echo $women[3]['description']; ?></p>
+					  <p><a href="#"><img class="pic" src=<? echo $women[3]['img']?>></a></p>
+  				</div>
+  				<div class="column">
+					  <p><? echo $children[3]['description'];?></p>
+					  <p><a href="#"><img class="pic" src=<? echo $children[3]['img'];?>></a></p>
+  				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<p><? echo $men[6]['description'];?></p>
+					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_benetton_grey.jpg"></a>
+  				</div>
+  				<div class="column">
+					  <p><? echo $women[6]['description']; ?></p>
+					  <p><a href="#"><img class="pic" src=<? echo $women[6]['img']; ?>></a></p>
+  				</div>
+  				<div class="column">
+					  <p><? echo $children[6]['description']; ?></p>
+					  <p><a href="#"><img class="pic" src=<? echo $children[6]['img']; ?>></a></p>
+  				</div>
 			</div>
 		</div>
 	</body>
