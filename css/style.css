@@ -30,6 +30,7 @@ a:hover {
 	padding-top: 10%;
 }
 .search {
+	margin-top: 1%;
 	display: flex;
 	justify-content: center;
 }
@@ -127,6 +128,7 @@ font {
 	flex-direction: row;
 	justify-content: space-between;
 	padding-bottom: 1%;
+	padding-top: 1%;
 }
 
 footer {
@@ -294,4 +296,8 @@ input[type=user], input[type=password] {
   
   .checkout:hover {
 	background-color: #3f47bd;
+  }
+
+  .color {
+	  background-color: rgb(160, 153, 153);
   }

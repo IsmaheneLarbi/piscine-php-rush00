@@ -1,4 +1,4 @@
-<div id="menu">
+<div class="color" id="menu">
             <div id="left">
 			    <div class="dropdown">
 					<button class="button darkblue">WOMEN</button>
