@@ -58,9 +58,11 @@ h1 {
 	font-family: 'Courier New', Courier, monospace;
 	text-align: center;
 	color: rgba(49, 48, 48, 0.884);
-	background: rgba(255, 255, 255, 0.699);
 }
 
+.white {
+	background: rgba(255, 255, 255, 0.699);
+}
 font {
 	font-family: 'Courier New', Courier, monospace;
 }
