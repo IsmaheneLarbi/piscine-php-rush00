@@ -10,7 +10,6 @@
 			    <div class="dropdown">
 				<button class="button darkblue">WOMEN</button>
 				<div class="dropdown-content darkblue">
-					<a href="women.php"></a>
 					<a href="women.php">Clothes</a>
 					<a href="women.php">Shoes</a>
 					<a href="women.php">Accessoires</a>
@@ -60,21 +59,21 @@
 		<div id="center">
 			<div class="row">
 				<div class="column">
-					<p><a href="#"><img class="pic" src="img/women/white_shoe_w.jpg"></a></p>
+					<a href="#"><img class="pic" src="img/WOMEN/shirts/blouse_sanna_blue.jpg"></a>
 					<p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img class="pic" src="img/men/black_shoe_m.jpeg"></a></p>
-					  <p>description</p>
+					<a href="#"><img class="pic" src="img/MEN/bottoms/trouser_yourturn_grey.jpg"></a>
+					<p>description</p>
   				</div>
   				<div class="column">
-					  <p><a href="#"><img class="pic" src="img/men/t_shirt_black_m.jpg"></a></p>
-					  <p>description</p>
+					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_lacoste_white.jpg"></a>
+					<p>description</p>
   				</div>
 			</div>
 			<div class="row">
 				<div class="column center">
-					<p><a href="#"><img class="pic" src="img/men/t_shirt_red_m.jpg"></a></p>
+					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_benetton_grey.jpg"></a>
 					<p>description</p>
   				</div>
   				<!--<div class="column">
