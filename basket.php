@@ -63,7 +63,14 @@
 		    			<a href="#"><img class="pic" src="img/WOMEN/shirts/blouse_sanna_blue.jpg"></a>
                         <div class="description">
                             <p id="test">description</p>
-                            <p>description 2</p>
+                            <p>Price: </p>
+                            <form>
+                                <select id="size" name="size">
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                </select>
+                            </form>
                         </div>
                    </div>
                 </div>

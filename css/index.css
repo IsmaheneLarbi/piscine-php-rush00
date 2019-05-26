@@ -21,6 +21,35 @@ a:hover {
 .homepage:hover {
 	color:grey;
 }
+.homepage {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	padding-top: 10%;
+}
+.search {
+	display: flex;
+	justify-content: center;
+}
+input[type=text] {
+	display: flex;
+	justify-content: center;
+	width: 250px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px; 
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+	width: 50%;
+  }
 h1 {
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -68,7 +97,8 @@ h1 {
 #menu {
 	display: flex;
 	flex-direction: row;
-    justify-content: center;
+	justify-content: space-between;
+	padding-bottom: 1%;
 }
 
 footer {
@@ -77,6 +107,7 @@ footer {
 	text-align: center;
 	bottom: 0;
 	position: relative;
+	padding-top: 2%;
 	left: 0;
 	width: 100%;
 }
@@ -92,7 +123,8 @@ html {
 #push {
     display: flex;
     flex-direction: row;
-	padding-left: 20%;
+	padding-right: 10%;
+	padding-left: 5%;
 }
 .center {
 	display: flex;
@@ -103,7 +135,7 @@ html {
 #left {
     display: flex;
     flex-direction: row;
-    padding-right: 20%;
+    padding-left: 10%;
 }
 .dropdown-content {
 	display: none;
