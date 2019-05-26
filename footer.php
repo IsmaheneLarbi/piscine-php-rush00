@@ -1,4 +1,4 @@
 <footer>
 		<hr/>
-		<p>© ilarbi & sluetzen 2019</p>
+		<p class="pfooter">© ilarbi & sluetzen 2019</p>
 </footer>

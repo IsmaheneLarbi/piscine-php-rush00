@@ -6,7 +6,7 @@ button:hover {
     opacity: 0.8;
   }
 a {
-	color: rgb(51, 51, 51);
+	color: rgb(0, 0, 0);
 	padding: 20px;
 	font-size: 18px;
 	text-decoration: none;
@@ -63,10 +63,7 @@ h1 {
 font {
 	font-family: 'Courier New', Courier, monospace;
 }
-/*h1 {
-    padding-top: 5%;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}*/
+
 .darkblue {background-color: rgb(20, 132, 211);}
 .seablue {background-color: rgb(23, 146, 232);}
 .skyblue {background-color: rgb(25, 156, 231);}
@@ -105,6 +102,7 @@ font {
 	/*height: 200px;
 	width: 200px;*/
 	padding: 5px;
+	background: rgba(236, 233, 233, 0.774);
 	border:1px solid black;
 	border-radius: 3%;
 }
@@ -114,6 +112,7 @@ font {
 	width: 200px;*/
 	padding: 5px;
 	width: 60%;
+	background: rgba(236, 233, 233, 0.651);
 	border:1px solid black;
 	border-radius: 3%;
 	display: flex;
@@ -144,8 +143,9 @@ footer {
 	width: 100%;
 }
 html {
-    /*background-image: url(../img/background.jpeg);*/
-    background-repeat: no-repeat;
+	background-image: url(../img/background.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
     height: 100%;
     position: relative;
@@ -188,6 +188,7 @@ html {
 }
 p {
 	text-align: center;
+	font-weight: 600;
 	font-family: 'Courier New', Courier, monospace;
 }
 
@@ -300,10 +301,6 @@ input[type=user], input[type=password] {
 	background-color: #3f47bd;
   }
 
-  .color {
-	  background-color: rgba(230, 213, 213, 0.623);
-  }
-
   #shoes{
 
   }
@@ -332,3 +329,17 @@ input[type=user], input[type=password] {
   .deletepic {
 	  width: 20%;
   }
+
+  .addtobasket {
+	  display: flex;
+	  flex-direction: column;
+  }
+  .sizeadd {
+	width: 40px;
+	margin-left: 27%;
+    margin-bottom: 10px;
+}
+.pfooter {
+	color: white;
+	font-weight: 100;
+}
