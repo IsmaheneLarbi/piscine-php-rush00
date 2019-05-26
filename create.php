@@ -25,7 +25,7 @@
             }
             
             $query = "INSERT INTO Users(username, passwd, privilege) VALUES(?, ?, ?)";
-            insert_into_users($con, "Users", $privilege);
+            insert_into_table($con, "Users", $query, array('username'=>$_SESSION['login'], 'passwd'=>$_SESSION['passwd'], 'privilege'=>$privilege));
             
         }
         else
