@@ -3,25 +3,25 @@
 			    <div class="dropdown">
 					<button class="button darkblue">WOMEN</button>
 				<div class="dropdown-content darkblue">
-					<a href="women.php">Shirts</a>
-					<a href="women.php">Bottoms</a>
-					<a href="women.php">Shoes</a>
+					<a href="women.php#shirts">Shirts</a>
+					<a href="women.php#bottoms">Bottoms</a>
+					<a href="women.php#shoes">Shoes</a>
 				</div>
 			    </div>
 			    <div class="dropdown">
 				<button class="button seablue">MEN</button>
 				<div class="dropdown-content seablue">
-					<a href="men.php">Shirts</a>
-					<a href="men.php">Bottoms</a>
-					<a href="men.php">Shoes</a>
+					<a href="men.php#shirts">Shirts</a>
+					<a href="men.php#bottoms">Bottoms</a>
+					<a href="men.php#shoes">Shoes</a>
 				</div>
 			    </div>
 			    <div class="dropdown">
 				<button class="button middleblue">CHILDREN</button>
 				<div class="dropdown-content middleblue">
-					<a href="children.php">Shirts</a>
-					<a href="children.php">Bottoms</a>
-					<a href="children.php">Shoes</a>
+					<a href="children.php#shirts">Shirts</a>
+					<a href="children.php#bottoms">Bottoms</a>
+					<a href="children.php#shoes">Shoes</a>
 				</div>
                 </div>
             </div>

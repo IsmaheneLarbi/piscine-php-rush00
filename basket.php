@@ -64,7 +64,7 @@
 					<p><a href="#">Product 4</a> <span class="price">$2</span></p>
 					<hr>
 					<p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-					<input type="submit" value="Continue to checkout" class="checkout">
+					<input type="submit" value="Checkout" class="checkout">
 				</div>
 			</div>
 		</div>
