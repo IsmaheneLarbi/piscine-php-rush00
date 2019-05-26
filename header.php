@@ -11,17 +11,17 @@
 			    <div class="dropdown">
 				<button class="button seablue">MEN</button>
 				<div class="dropdown-content seablue">
-					<a href="#">Shirts</a>
-					<a href="#">Bottoms</a>
-					<a href="#">Shoes</a>
+					<a href="men.php">Shirts</a>
+					<a href="men.php">Bottoms</a>
+					<a href="men.php">Shoes</a>
 				</div>
 			    </div>
 			    <div class="dropdown">
 				<button class="button middleblue">CHILDREN</button>
 				<div class="dropdown-content middleblue">
-					<a href="#">Shirts</a>
-					<a href="#">Bottoms</a>
-					<a href="#">Shoes</a>
+					<a href="children.php">Shirts</a>
+					<a href="children.php">Bottoms</a>
+					<a href="children.php">Shoes</a>
 				</div>
                 </div>
             </div>

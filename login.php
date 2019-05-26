@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 	<body>
+    <?php  require_once 'header.php';  ?>
         <div id="box">
 	    	<form action="./login.php" method="POST">
             <div id="login">
@@ -59,5 +60,6 @@
             </div>
             </form>
         </div>
-	</body>
+    </body>
+    <?php  require_once 'footer.php';  ?>
 </html>
