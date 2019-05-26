@@ -55,6 +55,9 @@
                 </div>
             </div>
 		</div>
+		<form class="search">
+  			<input type="text" name="search" placeholder="Search for an article..">
+		</form>
 		<br>
 		<div id="center">
 			<div class="row">
