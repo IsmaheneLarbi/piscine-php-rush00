@@ -47,6 +47,8 @@ $db = "Inventory";
         insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/converse_blue.jpg', 'description'=>'CONVERSE model 45', 'price'=>90, 'size'=>40));
         insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/newbalance_white.jpg', 'description'=>'NEW BALANCE model 360', 'price'=>85, 'size'=>38));
         insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/shoes/nike_white.jpg', 'description'=>'NIKE AIR', 'price'=>160, 'size'=>42));
+        insert_into_table($con, "Men", "INSERT INTO Men(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/men/bottoms/shorts_izod_blue.jpg', 'description'=>'Shorts IZOD Menwear', 'price'=>60, 'size'=>38));
+
         
         
         insert_into_table($con, "Women", "INSERT INTO Women(img, `description`, price, size) VALUES(?, ?, ?, ?)", array('img'=> './img/women/bottoms/trouser_leivs_black.jpg', 'description'=>'Trousers LEVI\'S', 'price'=>140, 'size'=>38));
