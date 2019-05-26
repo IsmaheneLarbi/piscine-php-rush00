@@ -2,10 +2,10 @@
 
 <?php
 
-    include_once "connect.php";
-    include_once "create_db.php";
-    include_once "create_tbl.php";
-    // include_once "";
+    include_once "./lib/connect.php";
+    include_once "./lib/create_db.php";
+    include_once "./lib/create_tbl.php";
+    include_once "./lib/insert_into_table.php";
 
 // 1* load resources: images
 // 2* connect to db
@@ -31,5 +31,19 @@
         create_tbl($con, "Men", $men);
         create_tbl($con, "Women", $women);
         create_tbl($con, "Children", $children);
+
+        //3*filling
+        insert_into_table($con, "Men", "INSERT INTO Men(img, description, price, size) VALUES('./img/men/black_shoe_m.jpeg', 'VANS model 369', 100, 39)");
+        insert_into_table($con, "Men", "INSERT INTO Men(img, description, price, size) VALUES('./img/men/t_shirt_black_m.jpg', 't-shirt ZARA spring men colllection', 80, 38)");
+        insert_into_table($con, "Men", "INSERT INTO Men(img, description, price, size) VALUES('./img/men/white_shoe_w.jpg', 't-shirt ZARA spring men colllection', 80, 40)");
+
+
+        insert_into_table($con, "Women", "INSERT INTO Women(img, description, price, size) VALUES('./img/women/jpg', 't-shirt SCREEN STARS spring women colllection', 100, 38)");
+        insert_into_table($con, "Women", "INSERT INTO Women(img, description, price, size) VALUES('./img/women/t_shirt_blue_w.jpg', 't-shirt QGIS spring  colllectn', 40, 36)");
+        insert_into_table($con, "Women", "INSERT INTO Women(img, description, price, size) VALUES('./img/women/white_shoe_w.jpg', 'ADIDAS Stan Smith', 100, 38)");
+
+        insert_into_table($con, "Children", "INSERT INTO Children(img, description, price, size) VALUES('./img/t_shirt_red_m.jpg', 't-shirt SCREEN STARS spring women colllection', 100, 38)");
+        insert_into_table($con, "Children", "INSERT INTO Children(img, description, price, size) VALUES('./img/t_shirt_blue_w.jpg', 't-shirt QGIS spring women colllection', 40, 36)");
+        insert_into_table($con, "Children", "INSERT INTO Children(img, description, price, size) VALUES('./img/white_shoe_w.jpg', 'ADIDAS Stan Smith', 100, 38)");
     }
 ?>
