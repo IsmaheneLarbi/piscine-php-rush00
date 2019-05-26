@@ -39,15 +39,15 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 	<body>
-        <div id="center">
+        <div id="box">
 	    	<form action="./login.php" method="POST">
             <div id="login">
                 <h1>SIGN IN</h1>
                 <p>Username</p>
-                <input type="text" placeholder="Enter Username" name="login">
+                <input type="user" placeholder="Enter Username" name="login">
                 <p>Password</p>
                 <p><input type="password" placeholder="Enter Password" name="passwd"></p>
                 <input type="submit" name="submit" value="Sign in">
