@@ -41,7 +41,8 @@
   				<div class="column">
 					<p><?php  echo $women[0]['description']; ?></p>
 					<?php
-						$result = mysqli_query($con, "SELECT size FROM Women WHERE `description` ='".$women[0]['description']."'");
+						
+						$result = mysqli_query($con, "SELECT size FROM Women WHERE `description` =\"".$women[0]['description']."\"");
 						$articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 					?>
 					<a href="#"><img class="pic" src=<?php  echo $women[0]['img']?>></a>
