@@ -4,7 +4,7 @@
     {
         if (!mysqli_query($con, $query))
         {
-            echo "Error: failed to  insert into ".$tbl_name."  ".mysqli_error();
+            echo "Error: failed to  insert into ".$tbl_name."  ".mysqli_error($con);
         }
     }
 ?>
