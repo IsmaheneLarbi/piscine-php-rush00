@@ -47,7 +47,7 @@
 			<div class="row">
 				<div class="column">
 					<p><?php echo $men[6]['description'];?></p>
-					<a href="#"><img class="pic" src="img/CHILDREN/shirts/t_shirt_benetton_grey.jpg"></a>
+					<a href="#"><img class="pic" src= <?php echo $men[6]['img']; ?> ></a>
   				</div>
   				<div class="column">
 					  <p><?php echo $women[6]['description']; ?></p>
