@@ -14,7 +14,6 @@
 	</head>
 	<body>
 	<?php  require_once 'header.php';  ?>
-		<br>
 	<div id="center">
 			<div class="row">
 				<div class="column">
