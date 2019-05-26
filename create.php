@@ -1,15 +1,35 @@
 <?php
     session_start();
-    // var_dump($_SESSION);
-    if (!empty($_POST['submit']) && $_POST['submit'] === "OK"
-    && !empty($_POST['login']) && !empty($_POST['passwd']))
+    
+	include_once "./install.php";
+    
+    echo "OK sis3!\n";
+    include_once "./lib/tbl_get_rows.php";
+    include_once "./lib/insert_into_table.php";
+	$users = tbl_get_rows($con, "Users");
+    if (isset($_POST['submit']))
     {
-        $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
-        $_SESSION['passwd'] = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
-        print_r($_SESSION);
+        if (!empty($_POST['submit']) && $_POST['submit'] === "Submit"
+        && !empty($_POST['login']) && !empty($_POST['passwd']))
+        {
+            $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
+            $_SESSION['passwd'] = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
+            foreach ($users as $key =>$value)
+            {
+                if ($value['username'] === $_SESSION['login'])
+                {
+                    echo "Error : a user with this username already exists!\n";
+                    exit();
+                }
+            }
+            
+            $query = "INSERT INTO Users(username, passwd, privilege) VALUES(?, ?, ?)";
+            insert_into_table($con, "Users", $query);
+            
+        }
+        else
+            echo "Error : No login and/or password provided\n";
     }
-    else
-        echo "Error : No login and/or password provided\n";
 ?>
 <html>
 <head>
