@@ -66,6 +66,7 @@ $db = "Inventory";
         insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/CHILDREN/shoes/babies_sandals.jpg', 'Babies Sandals  FRIBO Children collection', 120, 28)");
         insert_into_table($con, "Children", "INSERT INTO Children(img, `description`, price, size) VALUES('./img/men/shoes/nike_white.jpg', 'NIKE Children collection', 90, 26)");
 
+        echo "done with install\n";
         //load mainpage
         // header("Location : index.php");
     }
