@@ -17,42 +17,49 @@ $children = tbl_get_rows($con, "Children");
 <body>
 	<?php require_once 'header.php';  ?>
 	<div id="center">
-		<div class="row">
-			<div class="column">
-				<p><?php echo $men[0]['description']; ?></p>
-				<a href="#"><img class="pic" src=<?php echo $men[0]['img']; ?>></a>
-				<div class="add">
-					<p>Price: </p>
-					<!--<input class="addtype" type="button" value="Add to basket">-->
-					<form action="addtobasket" method="post">
-						<!--<label for="action">Options:</label>-->
-						<div class="addtobasket">
-							<p>Size</p>
-							<select name="action" class="sizeadd">
-								<option value="37">37</option>
-								<option value="38">38</option>
-								<option value="39">39</option>
-							</select>
-							<button type="add" name="submit" value="submit">Add to basket</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="column">
-				<p><?php echo $women[0]['description']; ?></p>
-				<a href="#"><img class="pic" src=<?php echo $women[0]['img'] ?>></a>
-				<div class="add">
-					<p>Price: </p>
-					<input class="addtype" type="button" value="Add to basket">
-				</div>
-			</div>
-			<div class="column">
-				<p><?php echo $children[0]['description']; ?></p>
-				<a href="#"><img class="pic" src=<?php echo $children[0]['img']; ?>></a>
-				<div class="add">
-					<p>Price: </p>
-					<input class="addtype" type="button" value="Add to basket">
-				</div>
+			<div class="row">
+				<div class="column">
+					<p><?php  echo $men[0]['description'];?></p>
+					<?php
+						$result = mysqli_query($con, "SELECT size FROM Men WHERE `description` ='".$men[0]['description']."'");
+						$articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+					?>
+					<a href="#"><img class="pic" src=<?php  echo $men[0]['img'];?>></a>
+					<div class="add">
+						<p>Price: </p>
+						<form action="addtobasket.php" method="GET">
+							  	<p>Size</p>
+  								<select name="size" id="size">
+								<?php foreach ($articles as $key => $value)
+									echo "<option value=".$value['size'].">".$value['size']."</option>";
+									?>
+						 		</select> 
+								<input type="hidden" name="table" value="Men" />
+								<input type="hidden" name="index" value="0" />
+ 						 	<button type="submit">Add to basket</button>
+						</form> 
+					</div>
+  				</div>
+  				<div class="column">
+					<p><?php  echo $women[0]['description']; ?></p>
+					<?php
+						$result = mysqli_query($con, "SELECT size FROM Women WHERE `description` ='".$women[0]['description']."'");
+						$articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+					?>
+					<a href="#"><img class="pic" src=<?php  echo $women[0]['img']?>></a>
+					<div class="add">
+						<p>Price: </p>
+						<input class="addtype" type="button" value="Add to basket">
+					</div>
+  				</div>
+  				<div class="column">
+					<p><?php echo $children[0]['description']; ?></p>
+					<a href="#"><img class="pic" src=<?php echo $children[0]['img'];?>></a>
+					<div class="add">
+						<p>Price: </p>
+						<input class="addtype" type="button" value="Add to basket">
+					</div>
+  				</div>
 			</div>
 		</div>
 		<div class="row">
