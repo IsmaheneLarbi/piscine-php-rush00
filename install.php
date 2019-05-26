@@ -1,17 +1,16 @@
 <?php
 
-    include_once "./lib/connect.php";
-    include_once "./lib/create_db.php";
-    include_once "./lib/create_tbl.php";
-    include_once "./lib/insert_into_table.php";
-
+include_once "./lib/create_db.php";
+include_once "./lib/create_tbl.php";
+include_once "./lib/insert_into_table.php";
 // 1* load resources: images
 // 2* connect to db
-    $host = "127.0.0.1";
-    $user = "root";
-    $passwd = "myadmin";
-    $db = "Inventory";
+$host = "127.0.0.1";
+$user = "root";
+$passwd = "myadmin";
+$db = "Inventory";
 
+    include_once "./lib/connect.php";
     $con = connect($host, $user, $passwd);
     if (create_db($con, $db))
     {

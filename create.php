@@ -3,6 +3,13 @@
     // var_dump($_SESSION);
     if (!empty($_POST['submit']) && $_POST['submit'] === "OK"
     && !empty($_POST['login']) && !empty($_POST['passwd']))
+    {
+        $_SESSION['login'] = mysqli_real_escape_string($con, $_POST['login']);
+        $_SESSION['passwd'] = hash('whirlpool', mysqli_real_escape_string($con, $_POST['passwd']));
+        print_r($_SESSION);
+    }
+    else
+        echo "Error : No login and/or password provided\n";
 ?>
 <html>
 <head>

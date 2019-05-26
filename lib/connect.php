@@ -1,7 +1,10 @@
-<?
-    function connect($host, $user, $pwd)
+<?php
+
+    echo "In connect\n";
+
+    function connect($host, $user, $passwd)
     {
-        $con = mysqli_connect($host, $user, $pwd);
+        $con = mysqli_connect($host, $user, $passwd);
         if (!$con)
         {
             die("Could not connect to the database ".mysqli_connect_error());   
